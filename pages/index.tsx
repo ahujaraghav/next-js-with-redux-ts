@@ -2,15 +2,10 @@ import React from 'react'
 import { StoreState } from '../src/redux/config';
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux';
-import { PersistGate } from 'redux-persist/integration/react';
-import { Persistor } from 'redux-persist';
-import persistConnect from '../src/hocs/persist-connect';
 import Link from 'next/link'
-import protectedRoute from '../src/hocs/ProtectedRoute';
 import ActionTypes from '../src/redux/config/types';
 import AdminIndex from '../components/admin';
 import SuperadminIndex from '../components/superadmin';
-import Router from 'next/router';
 
 interface AppProps {
   role: string,

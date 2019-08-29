@@ -1,5 +1,4 @@
 import React from 'react'
-import persistConnect from '../../src/hocs/persist-connect';
 import protectedRoute, { RouteCheck } from '../../src/hocs/ProtectedRoute';
 import { connect } from 'react-redux';
 import { StoreState } from '../../src/redux/config';

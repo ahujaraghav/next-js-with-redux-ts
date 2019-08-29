@@ -1,6 +1,5 @@
 import React from 'react'
 import protectedRoute from '../../src/hocs/ProtectedRoute';
-import persistConnect from '../../src/hocs/persist-connect';
 import { connect } from 'react-redux';
 
 class AdminIndex extends React.Component {

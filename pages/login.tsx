@@ -1,7 +1,5 @@
-import React, { ReactEventHandler, FormEvent, InputHTMLAttributes } from 'react'
-import { PersistGate } from 'redux-persist/integration/react';
+import React, { FormEvent } from 'react'
 import { Persistor } from 'redux-persist';
-import protectedRoute from '../src/hocs/ProtectedRoute';
 import { Dispatch } from 'redux'
 import ActionTypes from '../src/redux/config/types';
 import { connect } from 'react-redux';

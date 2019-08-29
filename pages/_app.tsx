@@ -5,7 +5,6 @@ import NextComponent from 'next/app'
 import { Store } from 'redux';
 
 import Head from 'next/head';
-import { PersistGate } from 'redux-persist/integration/react';
 import { Persistor } from 'redux-persist';
 
 interface MyProps {

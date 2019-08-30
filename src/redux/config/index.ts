@@ -14,7 +14,7 @@ export interface StoreState {
   data: Data
 }
 
-export type CustomReducer<T> = (state: T, action: { type: ActionTypes, payload: any }) => T
+export type CustomReducer<T> = (state: T, action: { type: ActionTypes, payload: T }) => T
 
 export function initializeStore(req?: any, res?: any): { store: Store, persistor: Persistor } {
 
@@ -32,7 +32,7 @@ export function initializeStore(req?: any, res?: any): { store: Store, persistor
     storage: DefaultStorage
   })
 
-  const rootReducer = combineReducers(
+  const rootReducer = combineReducers<StoreState>(
     {
       user: persistReducer(persistCookieConfig('user'), userReducer),
       dataCookie: persistReducer(persistCookieConfig('data'), dataReducer),

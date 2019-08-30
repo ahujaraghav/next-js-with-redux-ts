@@ -1,7 +1,7 @@
-:root{
-  --main-color: red;
+.side-navigation {
+  width: 5000px;
+  float: left;
+  background-color: black;
 }
 
-body{
-  background-color: var(--main-color);
-}
+/*# sourceMappingURL=main.css.map */

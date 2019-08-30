@@ -3,6 +3,7 @@ import protectedRoute, { RouteCheck } from '../../src/hocs/ProtectedRoute';
 import { connect } from 'react-redux';
 import { StoreState } from '../../src/redux/config';
 
+
 class SuperadminIndex extends React.Component {
   render() {
     return (

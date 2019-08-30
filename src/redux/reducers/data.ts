@@ -16,7 +16,7 @@ const dataReducer: CustomReducer<Data> = (state = initialState, action) => {
     case ActionTypes.LOGIN_USER:
       return { records: 0 }
     default:
-      return { ...state }
+      return state
   }
 }
 

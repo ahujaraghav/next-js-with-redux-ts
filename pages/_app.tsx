@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import withReduxStore from '../src/hocs/WithReduxStore';
 import NextComponent from 'next/app'
 import { Store } from 'redux';
+import "../src/scss/custom/main.scss"
 
 import Head from 'next/head';
 import { Persistor } from 'redux-persist';
@@ -22,17 +23,25 @@ class MyApp extends NextComponent<MyProps> {
     return (
       <>
         <Head>
-          <link href="/static/css/main.css" rel="stylesheet" />
-          <link href="/static/css/bootstrap.css" rel="stylesheet" />
+          {/* <link href="/static/css/main.css" rel="stylesheet" />
+          <link href="/static/css/bootstrap.css" rel="stylesheet" /> */}
+          <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
         </Head>
 
         <Provider store={reduxStore}>
 
           <Component {...pageProps} />
 
+
         </Provider>
       </>
     )
+  }
+  componentDidMount() {
+
+    document.body.style.visibility = "visible"
+    document.body.style.opacity = '1'
+
   }
 }
 

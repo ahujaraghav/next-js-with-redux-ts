@@ -94,6 +94,7 @@ export default (Component: any) => {
     }
 
     render() {
+      console.log("redux render")
       return <Component {...this.props} reduxStore={this.reduxStore} persistor={this.persistor} />
     }
   }

@@ -1,0 +1,83 @@
+@keyframes text-fade {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 100;
+    display: none;
+  }
+}
+
+.side-navigation {
+  width: $side-navigation-width;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  float: left;
+  z-index: 100;
+  background-color: $side-navigation-color;
+  transition: width ease-in 0.2s;
+
+  &:hover {
+    width: $side-navigation-width-hover;
+  }
+
+  @include clearfix;
+  + div {
+    @extend .clear-side-navigation;
+  }
+}
+
+.side-navigation .nav-list {
+  font-size: 1.3rem;
+  padding-top: 80px;
+  height: 100vh;
+  background-color: $side-navigation-color;
+  border-right: 1px solid $navigation-gutter-color;
+
+  .nav-item {
+    background-color: $side-navigation-color;
+    height: 40px;
+    padding: 5px 10px;
+    overflow: hidden;
+    list-style-type: none;
+    color: $side-navigation-text;
+    cursor: pointer;
+
+    %item-hover {
+      background-color: darken($color: $side-navigation-color, $amount: 10);
+    }
+
+    %item-active {
+      background-color: darken($color: $side-navigation-color, $amount: 20);
+    }
+
+    &:hover {
+      background-color: darken($color: $side-navigation-color, $amount: 10);
+      .fa {
+        background-color: inherit;
+      }
+    }
+
+    &:active {
+      background-color: darken($color: $side-navigation-color, $amount: 20);
+      .fa {
+        background-color: inherit;
+      }
+    }
+
+    .fa {
+      font-size: 1.4rem;
+      margin: 0rem 1.5rem;
+      color: $side-navigation-text;
+      background-color: $side-navigation-color;
+    }
+  }
+}
+
+.clear-side-navigation {
+  margin-left: $side-navigation-width;
+}
